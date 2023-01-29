@@ -543,5 +543,27 @@ void main() {
       expect(locale.startOfWeek(), StartOfWeek.SUNDAY);
       expect(locale.ordinals(), null);
     });
+    test(
+        'test Jiffy.locale() method with parsing es locale should return correct date time in sw locale',
+        () async {
+      var locale = await Jiffy.locale('sw');
+      expect(jiffy1.fromNow(), 'hace un momento'); // spanish: hace un momento
+      expect(jiffy2.fromNow(), 'en un momento'); // spanish: en un momento
+      expect(jiffy3.fromNow(), 'hace un minuto'); // spanish: hace un minuto
+      expect(jiffy5.fromNow(), 'hace 10 minutos'); // spanish: hace 10 minutos
+      expect(jiffy6.fromNow(), 'hace una hora'); // spanish: hace una hora
+      expect(jiffy7.fromNow(), 'hace 10 horas'); // spanish: hace 10 horas
+      expect(jiffy8.fromNow(), 'hace un día'); // spanish: hace un día
+      expect(jiffy9.fromNow(), 'hace 10 días'); // spanish: hace 10 días
+      expect(jiffy10.from(Jiffy('2019-10-01')),
+          'hace un mes'); // spanish: hace un mes
+      expect(jiffy11.fromNow(), 'hace 10 meses'); // spanish: hace 10 meses
+      expect(jiffy12.fromNow(), 'hace un año'); // spanish: hace un año
+      expect(jiffy13.fromNow(), 'hace 10 años'); // spanish: hace 10 años
+      expect(locale.startOfWeek(),
+          StartOfWeek.SATURDAY); // spanish: StartOfWeek.MONDAY
+      expect(locale.ordinals(),
+          ['º', 'º', 'º', 'º']); // spanish: ['º', 'º', 'º', 'º']
+    });
   });
 }
