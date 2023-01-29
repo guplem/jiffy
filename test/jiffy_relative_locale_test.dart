@@ -543,27 +543,25 @@ void main() {
       expect(locale.startOfWeek(), StartOfWeek.SUNDAY);
       expect(locale.ordinals(), null);
     });
+    // Run flutter test test/jiffy_relative_locale_test.dart from the jiffy repo folder to test the locales
     test(
         'test Jiffy.locale() method with parsing es locale should return correct date time in sw locale',
         () async {
       var locale = await Jiffy.locale('sw');
-      expect(jiffy1.fromNow(), 'hace un momento'); // spanish: hace un momento
-      expect(jiffy2.fromNow(), 'en un momento'); // spanish: en un momento
-      expect(jiffy3.fromNow(), 'hace un minuto'); // spanish: hace un minuto
-      expect(jiffy5.fromNow(), 'hace 10 minutos'); // spanish: hace 10 minutos
-      expect(jiffy6.fromNow(), 'hace una hora'); // spanish: hace una hora
-      expect(jiffy7.fromNow(), 'hace 10 horas'); // spanish: hace 10 horas
-      expect(jiffy8.fromNow(), 'hace un día'); // spanish: hace un día
-      expect(jiffy9.fromNow(), 'hace 10 días'); // spanish: hace 10 días
-      expect(jiffy10.from(Jiffy('2019-10-01')),
-          'hace un mes'); // spanish: hace un mes
-      expect(jiffy11.fromNow(), 'hace 10 meses'); // spanish: hace 10 meses
-      expect(jiffy12.fromNow(), 'hace un año'); // spanish: hace un año
-      expect(jiffy13.fromNow(), 'hace 10 años'); // spanish: hace 10 años
-      expect(locale.startOfWeek(),
-          StartOfWeek.SATURDAY); // spanish: StartOfWeek.MONDAY
-      expect(locale.ordinals(),
-          ['º', 'º', 'º', 'º']); // spanish: ['º', 'º', 'º', 'º']
+      expect(jiffy1.fromNow(), 'hace un momento'); // spanish: hace un momento  // English: a few seconds ago
+      expect(jiffy2.fromNow(), 'en un momento'); // spanish: en un momento // English: in a few seconds
+      expect(jiffy3.fromNow(), 'hace un minuto'); // spanish: hace un minuto // English: a minute ago
+      expect(jiffy5.fromNow(), 'hace 10 minutos'); // spanish: hace 10 minutos // English: 10 minutes ago
+      expect(jiffy6.fromNow(), 'hace una hora'); // spanish: hace una hora // English: an hour ago
+      expect(jiffy7.fromNow(), 'hace 10 horas'); // spanish: hace 10 horas // English: 10 hours ago
+      expect(jiffy8.fromNow(), 'hace un día'); // spanish: hace un día // English: a day ago
+      expect(jiffy9.fromNow(), 'hace 10 días'); // spanish: hace 10 días // English: 10 days ago
+      expect(jiffy10.from(Jiffy('2019-10-01')), 'hace un mes'); // spanish: hace un mes // English: a month ago
+      expect(jiffy11.fromNow(), 'hace 10 meses'); // spanish: hace 10 meses // English: 10 months ago
+      expect(jiffy12.fromNow(), 'hace un año'); // spanish: hace un año // English: a year ago
+      expect(jiffy13.fromNow(), 'hace 10 años'); // spanish: hace 10 años // English: 10 years ago
+      expect(locale.startOfWeek(), StartOfWeek.SATURDAY); // spanish: StartOfWeek.MONDAY // English: StartOfWeek.SUNDAY
+      expect(locale.ordinals(), ['º', 'º', 'º', 'º']); // spanish: ['º', 'º', 'º', 'º'] // English: ['st', 'nd', 'rd', 'th']
     });
   });
 }
