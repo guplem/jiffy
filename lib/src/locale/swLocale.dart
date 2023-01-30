@@ -18,13 +18,13 @@ class SwLocale extends Locale {
 
 class EsRelativeTime extends RelativeTime {
   @override
-  String prefixAgo() => 'mda';
+  String prefixAgo() => 'muda';
   @override
-  String prefixFromNow() => 'mda';
+  String prefixFromNow() => 'muda';
   @override
   String suffixAgo() => 'zilizopita';
   @override
-  String suffixFromNow() => 'ujuao';
+  String suffixFromNow() => 'ujao';
   @override
   String lessThanOneMinute(int seconds) => 'mchache';
   @override
