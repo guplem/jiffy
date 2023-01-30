@@ -10,7 +10,7 @@ class SwLocale extends Locale {
   RelativeTime relativeTime() => EsRelativeTime();
 
   @override
-  List<String>? ordinals() => ['º', 'º', 'º', 'º'];
+  List<String>? ordinals() => null;
 
   @override
   StartOfWeek startOfWeek() => strtOfWeek;
@@ -18,35 +18,35 @@ class SwLocale extends Locale {
 
 class EsRelativeTime extends RelativeTime {
   @override
-  String prefixAgo() => 'hace';
+  String prefixAgo() => 'mda';
   @override
-  String prefixFromNow() => 'en';
+  String prefixFromNow() => 'mda';
   @override
-  String suffixAgo() => '';
+  String suffixAgo() => 'zilizopita';
   @override
-  String suffixFromNow() => '';
+  String suffixFromNow() => 'ujuao';
   @override
-  String lessThanOneMinute(int seconds) => 'un momento';
+  String lessThanOneMinute(int seconds) => 'mchache';
   @override
-  String aboutAMinute(int minutes) => 'un minuto';
+  String aboutAMinute(int minutes) => 'dakika moja';
   @override
-  String minutes(int minutes) => '$minutes minutos';
+  String minutes(int minutes) => 'dakika $minutes';
   @override
-  String aboutAnHour(int minutes) => 'una hora';
+  String aboutAnHour(int minutes) => 'lisaa limoja';
   @override
-  String hours(int hours) => '$hours horas';
+  String hours(int hours) => 'masaaa $hours';
   @override
-  String aDay(int hours) => 'un día';
+  String aDay(int hours) => 'siku moja';
   @override
-  String days(int days) => '$days días';
+  String days(int days) => 'siku $days';
   @override
-  String aboutAMonth(int days) => 'un mes';
+  String aboutAMonth(int days) => 'mwezi mmoja';
   @override
-  String months(int months) => '$months meses';
+  String months(int months) => 'miezi $months';
   @override
-  String aboutAYear(int year) => 'un año';
+  String aboutAYear(int year) => 'mwaka mmoja';
   @override
-  String years(int years) => '$years años';
+  String years(int years) => 'miaka $years';
   @override
   String wordSeparator() => ' ';
 }
