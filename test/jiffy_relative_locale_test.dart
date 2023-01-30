@@ -548,20 +548,20 @@ void main() {
         'test Jiffy.locale() method with parsing es locale should return correct date time in sw locale',
         () async {
       var locale = await Jiffy.locale('sw');
-      expect(jiffy1.fromNow(), 'hace un momento'); // spanish: hace un momento  // English: a few seconds ago
-      expect(jiffy2.fromNow(), 'en un momento'); // spanish: en un momento // English: in a few seconds
-      expect(jiffy3.fromNow(), 'hace un minuto'); // spanish: hace un minuto // English: a minute ago
-      expect(jiffy5.fromNow(), 'hace 10 minutos'); // spanish: hace 10 minutos // English: 10 minutes ago
-      expect(jiffy6.fromNow(), 'hace una hora'); // spanish: hace una hora // English: an hour ago
-      expect(jiffy7.fromNow(), 'hace 10 horas'); // spanish: hace 10 horas // English: 10 hours ago
-      expect(jiffy8.fromNow(), 'hace un día'); // spanish: hace un día // English: a day ago
-      expect(jiffy9.fromNow(), 'hace 10 días'); // spanish: hace 10 días // English: 10 days ago
-      expect(jiffy10.from(Jiffy('2019-10-01')), 'hace un mes'); // spanish: hace un mes // English: a month ago
-      expect(jiffy11.fromNow(), 'hace 10 meses'); // spanish: hace 10 meses // English: 10 months ago
-      expect(jiffy12.fromNow(), 'hace un año'); // spanish: hace un año // English: a year ago
-      expect(jiffy13.fromNow(), 'hace 10 años'); // spanish: hace 10 años // English: 10 years ago
+      expect(jiffy1.fromNow(), 'mda mchache zilizopita'); // spanish: hace un momento  // English: a few seconds ago
+      expect(jiffy2.fromNow(), 'mda mchache ujuao'); // spanish: en un momento // English: in a few seconds
+      expect(jiffy3.fromNow(), 'dakika moja iliyopita'); // spanish: hace un minuto // English: a minute ago
+      expect(jiffy5.fromNow(), 'dakika 10 zilizopita'); // spanish: hace 10 minutos // English: 10 minutes ago
+      expect(jiffy6.fromNow(), 'lisaa limoja lililopita'); // spanish: hace una hora // English: an hour ago
+      expect(jiffy7.fromNow(), 'masaaa 10 yaliyopita'); // spanish: hace 10 horas // English: 10 hours ago
+      expect(jiffy8.fromNow(), 'siku moja iliyopita'); // spanish: hace un día // English: a day ago
+      expect(jiffy9.fromNow(), 'siku 10 zilizopita'); // spanish: hace 10 días // English: 10 days ago
+      expect(jiffy10.from(Jiffy('2019-10-01')), 'mwezi mmoja uliyopita'); // spanish: hace un mes // English: a month ago
+      expect(jiffy11.fromNow(), 'miezi 10 iliyopita'); // spanish: hace 10 meses // English: 10 months ago
+      expect(jiffy12.fromNow(), 'mwaka mmoja uliopita'); // spanish: hace un año // English: a year ago
+      expect(jiffy13.fromNow(), 'miaka 10 iliyopita'); // spanish: hace 10 años // English: 10 years ago
       expect(locale.startOfWeek(), StartOfWeek.SATURDAY); // spanish: StartOfWeek.MONDAY // English: StartOfWeek.SUNDAY
-      expect(locale.ordinals(), ['º', 'º', 'º', 'º']); // spanish: ['º', 'º', 'º', 'º'] // English: ['st', 'nd', 'rd', 'th']
+      expect(locale.ordinals(), null); // spanish: ['º', 'º', 'º', 'º'] // English: ['st', 'nd', 'rd', 'th']
     });
   });
 }
